@@ -36,7 +36,7 @@ _download_v2ray_file() {
 
 _install_v2ray_service() {
 	if [[ $systemd ]]; then
-		cp -f "/tmp/v2ray/systemd/v2ray.service" "/lib/systemd/system/"
+		cp -f "/tmp/v2ray/systemd/system/v2ray.service" "/lib/systemd/system/"
 		sed -i "s/on-failure/always/" /lib/systemd/system/v2ray.service
 		systemctl enable v2ray
 	else
