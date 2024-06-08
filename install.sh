@@ -754,9 +754,9 @@ install_v2ray() {
 	else
 		pushd /tmp
 		if [[ $_test ]]; then
-			git clone https://github.com/233boy/v2ray -b test /etc/v2ray/233boy/v2ray
+			git clone https://github.com/yjulm/233boy_v2ray_v3.05 -b test /etc/v2ray/233boy/v2ray
 		else
-			git clone https://github.com/233boy/v2ray /etc/v2ray/233boy/v2ray
+			git clone https://github.com/yjulm/233boy_v2ray_v3.05 -b v3.05-fix /etc/v2ray/233boy/v2ray
 		fi
 		popd
 
