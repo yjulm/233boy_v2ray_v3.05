@@ -84,7 +84,7 @@ if [[ $is_uninstall_v2ray && $is_uninstall_caddy ]]; then
 	# [ $v2ray_pid ] && systemctl stop v2ray
 	[ $v2ray_pid ] && do_service stop v2ray
 
-	rm -rf /usr/bin/v2ray
+	rm -rf /usr/local/bin/v2ray
 	rm -rf $_v2ray_sh
 	rm -rf /etc/v2ray
 	rm -rf /var/log/v2ray
@@ -146,7 +146,7 @@ elif [[ $is_uninstall_v2ray ]]; then
 	# [ $v2ray_pid ] && systemctl stop v2ray
 	[ $v2ray_pid ] && do_service stop v2ray
 
-	rm -rf /usr/bin/v2ray
+	rm -rf /usr/local/bin/v2ray
 	rm -rf $_v2ray_sh
 	rm -rf /etc/v2ray
 	rm -rf /var/log/v2ray
