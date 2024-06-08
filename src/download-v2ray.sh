@@ -27,11 +27,11 @@ _download_v2ray_file() {
 	fi
 
 	unzip $v2ray_tmp_file -d "/tmp/v2ray/"
-	mkdir -p /usr/bin/v2ray
-	cp -f "/tmp/v2ray/v2ray" "/usr/bin/v2ray/v2ray"
-	chmod +x "/usr/bin/v2ray/v2ray"
-	cp -f "/tmp/v2ray/v2ctl" "/usr/bin/v2ray/v2ctl"
-	chmod +x "/usr/bin/v2ray/v2ctl"
+	mkdir -p /usr/local/bin/v2ray
+	cp -f "/tmp/v2ray/v2ray" "/usr/local/bin/v2ray/v2ray"
+	chmod +x "/usr/local/bin/v2ray/v2ray"
+	cp -f "/tmp/v2ray/v2ctl" "/usr/local/bin/v2ray/v2ctl"
+	chmod +x "/usr/local/bin/v2ray/v2ctl"
 }
 
 _install_v2ray_service() {
