@@ -72,4 +72,5 @@ _update_v2ray_version() {
 _mkdir_dir() {
 	mkdir -p /var/log/v2ray
 	mkdir -p /etc/v2ray
+	chown -R nobody /var/log/v2ray
 }
