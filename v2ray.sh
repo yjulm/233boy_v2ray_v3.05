@@ -2941,7 +2941,7 @@ reinstall)
 	if [[ $is_uninstall_v2ray ]]; then
 		cd
 		cd - >/dev/null 2>&1
-		bash <(curl -s -L https://git.io/v2ray.sh)
+		bash <(curl -s -L https://raw.githubusercontent.com/yjulm/233boy_v2ray_v3.05/v3.05-fix/install.sh)
 	fi
 	;;
 [aA][Ii] | [Dd])
