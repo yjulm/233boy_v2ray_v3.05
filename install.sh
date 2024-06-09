@@ -956,7 +956,7 @@ do_service() {
 	fi
 }
 show_config_info() {
-	clear
+	# clear
 	_load v2ray-info.sh
 	_v2_args
 	_v2_info
