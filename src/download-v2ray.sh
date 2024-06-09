@@ -39,6 +39,7 @@ _install_v2ray_service() {
 	if [[ $systemd ]]; then
 		cp -f "/tmp/v2ray/systemd/system/v2ray.service" "/lib/systemd/system/"
 		sed -i "s/on-failure/always/" /lib/systemd/system/v2ray.service
+		sed -i "s/v2ray run/v2ray\/v2ray run/" /lib/systemd/system/v2ray.service
 		systemctl enable v2ray
 	else
 		apt-get install -y daemon
