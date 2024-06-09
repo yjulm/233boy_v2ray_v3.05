@@ -731,14 +731,16 @@ caddy_config() {
 install_v2ray() {
 	$cmd update -y
 	if [[ $cmd == "apt-get" ]]; then
-		$cmd install -y lrzsz git zip unzip curl wget qrencode libcap2-bin
+		$cmd install -y lrzsz git zip unzip curl wget qrencode libcap2-bin ntp ntpdate
 	else
 		# $cmd install -y lrzsz git zip unzip curl wget qrencode libcap iptables-services
-		$cmd install -y lrzsz git zip unzip curl wget qrencode libcap
+		$cmd install -y lrzsz git zip unzip curl wget qrencode libcap ntp ntpdate
 	fi
 	ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 	[ -d /etc/v2ray ] && rm -rf /etc/v2ray
 	date -s "$(curl -sI g.cn | grep Date | cut -d' ' -f3-6)Z"
+	ntpdate cn.pool.ntp.org
+	hwclock --systohc
 
 	if [[ $local_install ]]; then
 		if [[ ! -d $(pwd)/config ]]; then
