@@ -2041,7 +2041,7 @@ start_v2ray() {
 	else
 
 		# systemctl start v2ray
-		service v2ray start >/dev/null 2>&1
+		systemctl start v2ray >/dev/null 2>&1
 		if [[ $? -ne 0 ]]; then
 			echo
 			echo -e "${red} V2Ray 启动失败！$none"
@@ -2057,7 +2057,7 @@ start_v2ray() {
 stop_v2ray() {
 	if [[ $v2ray_pid ]]; then
 		# systemctl stop v2ray
-		service v2ray stop >/dev/null 2>&1
+		systemctl stop v2ray >/dev/null 2>&1
 		echo
 		echo -e "${green} V2Ray 已停止$none"
 		echo
@@ -2069,7 +2069,7 @@ stop_v2ray() {
 }
 restart_v2ray() {
 	# systemctl restart v2ray
-	service v2ray restart >/dev/null 2>&1
+	systemctl restart v2ray >/dev/null 2>&1
 	if [[ $? -ne 0 ]]; then
 		echo
 		echo -e "${red} V2Ray 重启失败！$none"
